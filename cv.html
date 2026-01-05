@@ -1,177 +1,306 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV JOEL JT</title>
+    <title>CV Senior Full Stack Engineer - Joel Tsongo</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb; /* Bleu Tech */
-            --dark: #1e293b;
-            --gray: #64748b;
-            --light: #f8fafc;
-            --border: #e2e8f0;
+         :root {
+            --primary: #0f172a;
+            /* Slate 900 - Look Premium */
+            --accent: #2563eb;
+            /* Blue 600 - Tech */
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: white;
-            color: var(--dark);
-            line-height: 1.5;
+            color: var(--text-main);
+            line-height: 1.6;
+            background: #fff;
             padding: 40px;
         }
-
-        .container { max-width: 850px; margin: 0 auto; }
-
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
         header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 20px;
+            align-items: flex-end;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .job-title {
+            color: var(--accent);
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .contact-info {
+            text-align: right;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+        
+        .summary {
+            font-size: 15px;
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary);
             margin-bottom: 25px;
         }
-
-        h1 { font-size: 28px; text-transform: uppercase; letter-spacing: 1px; }
-        .title { color: var(--primary); font-weight: 600; font-size: 18px; }
         
-        .contact-info { text-align: right; font-size: 13px; color: var(--gray); }
-        .contact-info a { color: var(--dark); text-decoration: none; font-weight: 600; }
-
-        section { margin-bottom: 20px; }
-        h2 { 
-            font-size: 16px; 
-            color: var(--primary); 
-            text-transform: uppercase; 
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-        }
-
-        .summary { font-size: 14px; color: var(--gray); font-style: italic; }
-
-        .skills-grid {
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
-        .skill-category { font-size: 14px; }
-        .skill-category strong { color: var(--dark); }
-
-        .experience, .project { margin-bottom: 15px; }
-        .exp-header { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; }
-        .date { color: var(--primary); font-size: 13px; }
-        .company { color: var(--gray); font-weight: 400; margin-bottom: 5px; display: block; }
         
-        ul { margin-left: 18px; font-size: 13.5px; color: var(--dark); }
-        li { margin-bottom: 3px; }
-
+        .skill-box h3 {
+            font-size: 13px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .skill-box p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .experience {
+            margin-bottom: 25px;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .exp-role {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .exp-company {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .exp-date {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        ul {
+            margin-top: 8px;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+        
+        .highlight {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .metrics {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .metric-tag {
+            font-size: 11px;
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 2px 8px;
+            border-radius: 12px;
+            border: 1px solid #dbeafe;
+            font-weight: 700;
+        }
+        
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 40px;
+            border-top: 1px solid #eee;
+            pt: 20px;
         }
-
+        
         @media print {
-            body { padding: 0; }
-            .container { width: 100%; }
+            body {
+                padding: 0;
+            }
+            .container {
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <div>
-            <h1>Joel Tsongo</h1>
-            <div class="title">Développeur Web Full Stack</div>
-        </div>
-        <div class="contact-info">
-            📍 RDC, Goma<br>
-            📞 +243 990 985 413<br>
-            📧 <a href="mailto:jtjoelk@gmail.com">jtjoelk@gmail.com</a><br>
-            🔗 <a href="https://www.linkedin.com/in/joel-jt-1120331b1/">in/joel-jt-1120331b1</a> | <a href="https://joeljt.site/">joeljt.site</a> | <a href="https://github.com/joel-jt-243">github.com/joel-jt-243</a>
-        </div>
-    </header>
-
-    <section>
-        <h2>Profil Professionnel</h2>
-        <p class="summary">
-            Développeur Full Stack passionné avec 5 ans d’expérience. Expert Laravel et Vue.js, je conçois des architectures web robustes et évolutives avec une forte culture du "Clean Code" et de la performance.
-        </p>
-    </section>
-
-    <section>
-        <h2>Compétences Techniques</h2>
-        <div class="skills-grid">
-            <div class="skill-category"><strong>Backend:</strong> Laravel,Node js, PHP 8, MySQL,postgresql, API REST</div>
-            <div class="skill-category"><strong>Frontend:</strong> Vue.js, React Js, JavaScript (ES6), Tailwind CSS</div>
-            <div class="skill-category"><strong>Outils:</strong> Git, Docker, GitHub Actions</div>
-            <div class="skill-category"><strong>Tests:</strong> PHPUnit, Pest, Cypress</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Expériences Professionnelles</h2>
-        <div class="experience">
-            <div class="exp-header">
-                <span>Développeur Senior Full Stack</span>
-                <span class="date">Jan. 2022 — Présent</span>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Joel Tsongo</h1>
+                <div class="job-title">Senior Full Stack Engineer & Software Architect</div>
             </div>
-            <span class="company">TechSolutions SAS, Paris</span>
-            <ul>
-                <li>Architecture et lead dev d'un SaaS B2B sous <strong>Laravel 10</strong> et <strong>Vue.js 3</strong>.</li>
-                <li>Optimisation des requêtes SQL : réduction du temps de réponse de l'API de <strong>40%</strong>.</li>
-                <li>Mise en place de tests automatisés couvrant 85% de la logique métier.</li>
-            </ul>
-        </div>
-
-        <div class="experience">
-            <div class="exp-header">
-                <span>Développeur Web Full Stack</span>
-                <span class="date">Sept. 2019 — Déc. 2021</span>
+            <div class="contact-info">
+                📍 Goma, RDC (Disponible Remote)<br> 📞 +243 990 985 413 | 📧 <a href="mailto:jtjoelk@gmail.com">jtjoelk@gmail.com</a><br> 🔗 <a href="https://www.linkedin.com/in/joel-jt-1120331b1/">linkedin.com/in/joel-jt</a> | <a href="github.com/joel-jt-243">github.com/joel-jt-243</a>
             </div>
-            <span class="company">Agence Web Digitale, Lyon</span>
-            <ul>
-                <li>Développement de sites e-commerce sur mesure et d'applications métiers.</li>
-                <li>Intégration de systèmes de paiement complexes (Stripe, PayPal).</li>
-            </ul>
-        </div>
-    </section>
+        </header>
 
-    <section>
-        <h2>Projets Phares</h2>
-        <div class="project">
-            <strong>E-Commerce OpenSource</strong> : Plateforme complète avec gestion de stock en temps réel.
-            <br><small>Stack : Laravel, Alpine.js, Tailwind CSS</small>
-        </div>
-        <div class="project">
-            <strong>Dashboard Analytique</strong> : Visualisation de données via API REST personnalisée.
-            <br><small>Stack : Vue.js, Chart.js, MySQL</small>
-        </div>
-    </section>
-
-    <div class="footer-grid">
         <section>
-            <h2>Formation</h2>
-            <div style="font-size: 13px;">
-                <strong>Master Informatique</strong> - Université Paris Cité<br>
-                <strong>Certification Laravel</strong> - Laravel LLC
+            <div class="summary">
+                Expert Full Stack avec <strong>5+ ans d'expérience</strong> spécialisé dans l'écosystème <strong>Laravel/Vue.js</strong>. Expert en conception d'architectures distribuées et APIs critiques, j'accompagne les entreprises dans la résolution
+                de problématiques de <strong>scalabilité</strong> et d'<strong>optimisation de performance</strong>. Adepte du Clean Code (SOLID, Design Patterns) et du DevOps.
             </div>
         </section>
+
         <section>
-            <h2>Langues & Intérêts</h2>
-            <div style="font-size: 13px;">
-                Anglais : Avancé (C1) | Français : Maternel<br>
-                Veille techno, Open Source, Echecs.
+            <h2>Expertises Techniques</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>Backend & Architecture</h3>
+                    <p>Laravel (Expert), PHP 8.3, Node.js, Microservices.</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Frontend & Mobile</h3>
+                    <p>Vue.js (Composition API), React, TypeScript, Tailwind CSS.</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Cloud & DevOps</h3>
+                    <p>Docker, GitHub Actions (CI/CD).</p>
+                </div>
             </div>
         </section>
+
+        <section>
+            <h2>Expériences Professionnelles</h2>
+
+            <div class="experience">
+                <div class="exp-header">
+                    <span class="exp-role">Backend Developer</span>
+                    <span class="exp-date">2025</span>
+                </div>
+                <div class="exp-company">Yakafrika</div>
+                <ul>
+                    <li><span class="highlight">Architecture :</span> Developpement d'une application de gestion evenementiel, billeterie et integration du moyen de payement</li>
+
+                </ul>
+                <div class="metrics">
+                    <span class="metric-tag">Laravel 10</span><span class="metric-tag">Vue.js 3</span><span class="metric-tag">Docker</span><span class="metric-tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="exp-header">
+                    <span class="exp-role">Full Stack Developer</span>
+                    <span class="exp-date">2022 — Présent</span>
+                </div>
+                <div class="exp-company">Global Technology (Goma-BURUNDI)</div>
+                <ul>
+                    <li><span class="highlight">Architecture :</span> Refonte d'un système monolithique vers une architecture orientée services pour une application RH gérant +10k employés.</li>
+                    <li><span class="highlight">Leadership :</span> Encadrement technique d'une équipe de 5 développeurs, mise en place de revues de code rigoureuses et de tests automatisés.</li>
+                    <li><span class="highlight">Performance :</span> Optimisation des transactions financières complexes, réduisant le temps de réponse des APIs de 40%.</li>
+                </ul>
+                <div class="metrics">
+                    <span class="metric-tag">Laravel 10</span><span class="metric-tag">Vue.js 3</span><span class="metric-tag">Docker</span><span class="metric-tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="exp-header">
+                    <span class="exp-role">Junior Web Engineer</span>
+                    <span class="exp-date">2020 — 2022</span>
+                </div>
+                <div class="exp-company">Uptodate Dev</div>
+                <ul>
+                    <li>Développement d'un moteur de paiement modulaire supportant Stripe, PayPal et des providers locaux (Mobile Money).</li>
+
+                </ul>
+                <div class="metrics">
+                    <span class="metric-tag">REST API</span><span class="metric-tag">Redis</span><span class="metric-tag">Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projets à Fort Impact</h2>
+            <div class="experience">
+                <p><strong>Gestion Dossiers Medicaux :</strong> Développement d'une Application de Gestion d'une clinique medicale</p>
+            </div>
+        </section>
+
+        <div class="footer-grid">
+            <section>
+                <h2>Formation</h2>
+                <p style="font-size: 14px;">
+                    <strong>Informatique de Gestion</strong> - ISIG-GOMA<br>
+
+                </p>
+            </section>
+            <section>
+                <h2>Langues</h2>
+                <p style="font-size: 14px;">
+                    <strong>Français :</strong> Maternel | <strong>Anglais :</strong> Intermediaire<br>
+                    <strong>Soft Skills :</strong> Mentorat, Résolution de problèmes complexes.
+                </p>
+            </section>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
